@@ -23,7 +23,6 @@ Contribuições são bem-vindas! Se você encontrar erros, tiver sugestões ou q
 ## Recursos Adicionais
 
 * **Fórum da Casa do Código:** [http://forum.casadocodigo.com.br/](http://forum.casadocodigo.com.br/)
-* **Blog do Maurício Aniche:** [URL inválido removido]
 
 ## Aviso
 
