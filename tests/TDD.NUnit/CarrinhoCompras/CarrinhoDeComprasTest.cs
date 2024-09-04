@@ -5,33 +5,56 @@ namespace TDD.NUnit.CarrinhoCompras;
 [TestFixture]
 public class CarrinhoDeComprasTest
 {
+    private CarrinhoDeCompras _carrinho;
+
+    [SetUp]
+    public void Inicializa()
+    {
+        _carrinho = new CarrinhoDeCompras();
+    }
+
+    [TearDown]
+    public void Limpar()
+    {
+        _carrinho.Itens.Clear();
+    }
+
     [Test]
     public void DeveRetornarZeroSeCarrinhoVazio()
     {
-        var carrinho = new CarrinhoDeCompras();
-
-        Assert.AreEqual(0.0, carrinho.MaiorValor(), 0.0001);
+        Assert.AreEqual(0.0, _carrinho.MaiorValor(), 0.0001);
     }
 
     [Test]
     public void DeveRetornarValorDoItemSeCarrinhoCom1Elemento()
     {
-        var carrinho = new CarrinhoDeCompras();
-        
-        carrinho.Adiciona(new Item("Geladeira", 1, 900));
+        _carrinho = CarrinhoDeComprasBuilder.Build(("Geladeira", 1, 900));
 
-        Assert.AreEqual(900, carrinho.MaiorValor(), 0.0001);
+        Assert.AreEqual(900.0, _carrinho.MaiorValor(), 0.0001);
     }
 
     [Test]
     public void DeveRetornarMaiorValorSeCarrinhoContemMuitosElementos()
     {
-        var carrinho = new CarrinhoDeCompras();
-        
-        carrinho.Adiciona(new Item("Geladeira", 1, 900));
-        carrinho.Adiciona(new Item("Fogão", 1, 1500.0));
-        carrinho.Adiciona(new Item("Máquina de Lavar", 1, 750.0));
+        _carrinho = CarrinhoDeComprasBuilder.Build(
+            ("Geladeira", 1, 900),
+            ("Fogão", 1, 1500.0),
+            ("Máquina de Lavar", 1, 750.0)
+        );
 
-        Assert.AreEqual(1500.0, carrinho.MaiorValor(), 0.0001);
+        Assert.AreEqual(1500.0, _carrinho.MaiorValor(), 0.0001);
+    }
+
+    [Test]
+    public void DeveAdicionarItens()
+    {
+        // garante que o carrinho está vazio
+        Assert.AreEqual(0, _carrinho.Itens.Count);
+
+        var item = new Item("Geladeira", 1, 900.0);
+        _carrinho.Adiciona(item);
+
+        Assert.AreEqual(1, _carrinho.Itens.Count);
+        Assert.AreEqual(item, _carrinho.Itens[0]);
     }
 }
