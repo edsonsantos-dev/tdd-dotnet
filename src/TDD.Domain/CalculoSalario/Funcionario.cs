@@ -12,4 +12,13 @@ public class Funcionario
         Salario = salario;
         Cargo = cargo;
     }
+
+    public double CalcularSalario()
+    {
+        var estrategiaCalculo = EstrategiaCalculoSalario.ObterEstrategiaCalculo(Cargo);
+        
+        return Salario > estrategiaCalculo.SalarioMaiorQue
+            ? Salario * estrategiaCalculo.PorcentagemMaiorQue
+            : Salario * estrategiaCalculo.PorcentagemMenorQue;
+    }
 }

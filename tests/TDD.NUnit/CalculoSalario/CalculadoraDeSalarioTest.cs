@@ -8,10 +8,9 @@ public class CalculadoraDeSalarioTest
     [Test]
     public void DeveCalcularSalarioParaDesenvolvedoresComSalarioAbaixoDoLimite()
     {
-        var calculadora = new CalculadoraDeSalario();
         var desenvolvedor = new Funcionario("Mauricio", 1500.0, Cargo.DESENVOLVEDOR);
 
-        var salario = calculadora.CalculaSalario(desenvolvedor);
+        var salario = desenvolvedor.CalcularSalario();
 
         Assert.AreEqual(1500.0 * 0.9, salario, 0.00001);
     }
@@ -19,10 +18,9 @@ public class CalculadoraDeSalarioTest
     [Test]
     public void DeveCalcularSalarioParaDesenvolvedoresComSalarioAcimaDoLimite()
     {
-        var calculadora = new CalculadoraDeSalario();
         var desenvolvedor = new Funcionario("Mauricio", 4000.0, Cargo.DESENVOLVEDOR);
 
-        var salario = calculadora.CalculaSalario(desenvolvedor);
+        var salario = desenvolvedor.CalcularSalario();
 
         Assert.AreEqual(4000.0 * 0.8, salario, 0.00001);
     }
@@ -30,11 +28,10 @@ public class CalculadoraDeSalarioTest
     [Test]
     public void deveCalcularSalarioParaDBAsComSalarioAbaixoDoLimite()
     {
-        var calculadora = new CalculadoraDeSalario();
         var dba = new Funcionario("Mauricio", 500.0, Cargo.DBA);
-        
-        var salario = calculadora.CalculaSalario(dba);
-        
+
+        var salario = dba.CalcularSalario();
+
         Assert.AreEqual(500.0 * 0.85, salario, 0.00001);
     }
 }
