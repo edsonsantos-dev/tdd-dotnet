@@ -6,7 +6,7 @@ namespace TDD.NUnit.CalculoSalario;
 public class CalculadoraDeSalarioTest
 {
     [Test]
-    public void DeveCalcularSalarioParaDesenvolvedoresComSalarioAbaixoDoLimite()
+    public void DeveCalcularSalarioDoLimiteComDezPorcentoDeDesconto()
     {
         var desenvolvedor = new Funcionario("Mauricio", 1500.0, Cargo.DESENVOLVEDOR);
 
@@ -16,7 +16,7 @@ public class CalculadoraDeSalarioTest
     }
 
     [Test]
-    public void DeveCalcularSalarioParaDesenvolvedoresComSalarioAcimaDoLimite()
+    public void DeveCalcularSalarioAcimaDoLimiteComVintePorcentoDeDesconto()
     {
         var desenvolvedor = new Funcionario("Mauricio", 4000.0, Cargo.DESENVOLVEDOR);
 
@@ -26,12 +26,23 @@ public class CalculadoraDeSalarioTest
     }
 
     [Test]
-    public void deveCalcularSalarioParaDBAsComSalarioAbaixoDoLimite()
+    public void DeveCalcularSalarioAbaixoDoLimiteComQuinzePorcentoDeDesconto()
     {
         var dba = new Funcionario("Mauricio", 500.0, Cargo.DBA);
 
         var salario = dba.CalcularSalario();
 
         Assert.AreEqual(500.0 * 0.85, salario, 0.00001);
+    }
+    
+    
+    [Test]
+    public void DeveCalcularSalarioAcimaDoLimiteComVinteEhCincoPorcentoDeDesconto()
+    {
+        var desenvolvedor = new Funcionario("Mauricio", 4000.0, Cargo.TESTADOR);
+
+        var salario = desenvolvedor.CalcularSalario();
+
+        Assert.AreEqual(3000.0 * 0.8, salario, 0.00001);
     }
 }
