@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TaxRules>
+    <Rule>
+        <Min>0</Min>
+        <Max>999</Max>
+        <Rate>0.02</Rate>
+    </Rule>
+    <Rule>
+        <Min>1000</Min>
+        <Max>2999</Max>
+        <Rate>0.06</Rate>
+    </Rule>
+    <Rule>
+        <Min>3000</Min>
+        <Max>5999</Max>
+        <Rate>0.10</Rate>
+    </Rule>
+    <Rule>
+        <Min>6000</Min>
+        <Max>9999</Max>
+        <Rate>0.14</Rate>
+    </Rule>
+    <Rule>
+        <Min>10000</Min>
+        <Max>14999</Max>
+        <Rate>0.18</Rate>
+    </Rule>
+    <Rule>
+        <Min>15000</Min>
+        <Max>19999</Max>
+        <Rate>0.22</Rate>
+    </Rule>
+    <Rule>
+        <Min>20000</Min>
+        <Max>999999999</Max>
+        <Rate>0.26</Rate>
+    </Rule>
+</TaxRules>

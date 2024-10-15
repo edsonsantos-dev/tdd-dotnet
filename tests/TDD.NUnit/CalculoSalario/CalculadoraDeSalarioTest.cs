@@ -43,6 +43,6 @@ public class CalculadoraDeSalarioTest
 
         var salario = desenvolvedor.CalcularSalario();
 
-        Assert.AreEqual(3000.0 * 0.8, salario, 0.00001);
+        Assert.AreEqual(4000.0 * 0.75, salario, 0.00001);
     }
 }
