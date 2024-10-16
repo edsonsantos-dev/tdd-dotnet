@@ -1,4 +1,4 @@
-namespace TDD.Domain.NumerosRomanos;
+namespace TDD.Domain.ProblemaNumerosRomanos;
 
 public class ConversorDeNumeroRomano
 {

@@ -1,4 +1,4 @@
-namespace TDD.Domain.CalculoSalario;
+namespace TDD.Domain.ProblemaCalculoSalario;
 
 public class Funcionario
 {

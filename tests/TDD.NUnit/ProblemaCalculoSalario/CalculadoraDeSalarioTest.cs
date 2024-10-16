@@ -1,6 +1,6 @@
-using TDD.Domain.CalculoSalario;
+using TDD.Domain.ProblemaCalculoSalario;
 
-namespace TDD.NUnit.CalculoSalario;
+namespace TDD.NUnit.ProblemaCalculoSalario;
 
 [TestFixture]
 public class CalculadoraDeSalarioTest

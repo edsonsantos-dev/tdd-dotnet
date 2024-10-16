@@ -1,6 +1,6 @@
-using TDD.Domain.CarrinhoCompras;
+using TDD.Domain.ProblemaCarrinhoCompras;
 
-namespace TDD.NUnit.CarrinhoCompras;
+namespace TDD.NUnit.ProblemaCarrinhoCompras;
 
 public class CarrinhoDeComprasBuilder
 {

@@ -22,4 +22,8 @@
       <ProjectReference Include="..\..\src\TDD.Domain\TDD.Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="ProblemaProcessadorDeBoleto\" />
+    </ItemGroup>
+
 </Project>

@@ -1,6 +1,6 @@
-using TDD.Domain.NumerosRomanos;
+using TDD.Domain.ProblemaNumerosRomanos;
 
-namespace TDD.NUnit.NumerosRomanos;
+namespace TDD.NUnit.ProblemaNumerosRomanos;
 
 [TestFixture]
 public class ConversorDeNumeroRomanoTest

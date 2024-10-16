@@ -1,4 +1,4 @@
-namespace TDD.Domain.CarrinhoCompras;
+namespace TDD.Domain.ProblemaCarrinhoCompras;
 
 public class Item
 {
